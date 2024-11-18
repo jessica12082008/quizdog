@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra sua Raça Canina Ideal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Adicione a imagem do logo aqui -->
+            <img src="logo.png" alt="Logo do Site" class="logo">
+        </div>
+        <h1>Descubra sua Raça Canina Ideal</h1>
+    </header>
+
+    <main>
+        <section class="quiz-container">
+            <h2>Responda às perguntas abaixo:</h2>
+            <form id="quiz-form">
+                <div class="question">
+                    <label for="activity">Qual é o seu nível de atividade física?</label>
+                    <select id="activity" required>
+                        <option value="alto">Alto</option>
+                        <option value="médio">Médio</option>
+                        <option value="baixo">Baixo</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="space">Você mora em:</label>
+                    <select id="space" required>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="casa-com-quintal">Casa com quintal</option>
+                        <option value="fazenda">Fazenda</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="temperament">Como você descreveria sua personalidade?</label>
+                    <select id="temperament" required>
+                        <option value="calmo">Calmo(a)</option>
+                        <option value="energico">Energético(a)</option>
+                        <option value="independente">Independente</option>
+                    </select>
+                </div>
+
+                <button type="submit">Descobrir Raça</button>
+            </form>
+        </section>
+
+        <section class="result-container" id="result">
+            <h2>Resultado</h2>
+            <p class="result-text">Responda ao questionário para descobrir sua raça canina ideal.</p>
+            <ul id="result-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Descubra sua Raça Canina Ideal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
