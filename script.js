@@ -3,13 +3,13 @@ const resultSection = document.getElementById('result');
 const resultText = document.querySelector('.result-text');
 const resultList = document.getElementById('result-list');
 
-// Raças com pesos baseados em características
+// Raças com pesos baseados em características e imagens
 const dogBreeds = [
-    { breed: 'Golden Retriever', match: 0 },
-    { breed: 'Bulldog Francês', match: 0 },
-    { breed: 'Poodle', match: 0 },
-    { breed: 'Pastor Alemão', match: 0 },
-    { breed: 'Shih Tzu', match: 0 },
+    { breed: 'Golden Retriever', match: 0, image: 'images/golden-retriever.jpg' },
+    { breed: 'Bulldog Francês', match: 0, image: 'images/french-bulldog.jpg' },
+    { breed: 'Poodle', match: 0, image: 'images/poodle.jpg' },
+    { breed: 'Pastor Alemão', match: 0, image: 'images/german-shepherd.jpg' },
+    { breed: 'Shih Tzu', match: 0, image: 'images/shih-tzu.jpg' },
 ];
 
 form.addEventListener('submit', (e) => {
@@ -40,9 +40,18 @@ form.addEventListener('submit', (e) => {
     const sortedBreeds = dogBreeds.sort((a, b) => b.match - a.match);
 
     // Exibir resultados
+    const topBreed = sortedBreeds[0]; // O mais compatível
+
     resultSection.style.display = 'block';
-    resultText.textContent = 'Com base nas suas respostas, aqui estão as raças que mais combinam com você:';
-    resultList.innerHTML = sortedBreeds
-        .map(dog => `<li>${dog.breed} - ${dog.match}% de compatibilidade</li>`)
-        .join('');
+    resultText.innerHTML = `
+        Com base nas suas respostas, sua raça canina ideal é: 
+        <strong>${topBreed.breed}</strong> (${topBreed.match}% de compatibilidade).
+    `;
+
+    resultList.innerHTML = `
+        <li>
+            <img src="${topBreed.image}" alt="${topBreed.breed}" class="dog-image">
+            <p>${topBreed.breed} - ${topBreed.match}% de compatibilidade</p>
+        </li>
+    `;
 });
