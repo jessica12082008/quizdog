@@ -7,9 +7,9 @@ const resultList = document.getElementById('result-list');
 const dogBreeds = [
     { breed: 'Golden Retriever', match: 0, image: 'golden.webp' },
     { breed: 'Bulldog Francês', match: 0, image: 'bulldogf.webp' },
-    { breed: 'Poodle', match: 0, image: 'images/poodle.jpg' },
-    { breed: 'Pastor Alemão', match: 0, image: 'images/german-shepherd.jpg' },
-    { breed: 'Shih Tzu', match: 0, image: 'images/shih-tzu.jpg' },
+    { breed: 'Poodle', match: 0, image: 'poodle.webp' },
+    { breed: 'Pastor Alemão', match: 0, image: 'pastor.webp' },
+    { breed: 'Shih Tzu', match: 0, image: 'shihtzu.webp' },
 ];
 
 form.addEventListener('submit', (e) => {
