@@ -5,7 +5,7 @@ const resultList = document.getElementById('result-list');
 
 // Raças com pesos baseados em características e imagens
 const dogBreeds = [
-    { breed: 'Golden Retriever', match: 0, image: 'images/golden.webp' },
+    { breed: 'Golden Retriever', match: 0, image: 'golden.webp' },
     { breed: 'Bulldog Francês', match: 0, image: 'images/french-bulldog.jpg' },
     { breed: 'Poodle', match: 0, image: 'images/poodle.jpg' },
     { breed: 'Pastor Alemão', match: 0, image: 'images/german-shepherd.jpg' },
